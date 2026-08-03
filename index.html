@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Benefits | Medicare explicado en español — Ernesto Sánchez</title>
+<meta name="description" content="Asesoría de Medicare en español en los 50 estados, sin costo para usted. Déjenos sus datos y un agente con licencia lo llama. Partes A, B, C y D explicadas claro.">
+<meta name="theme-color" content="#0f2a4a">
+
+<!-- Redes sociales / WhatsApp preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Golden Benefits | Medicare en su idioma">
+<meta property="og:description" content="Medicare explicado claro, en español y sin costo para usted. Déjenos sus datos y lo llamamos. Atendemos en los 50 estados.">
+<meta property="og:locale" content="es_US">
+<meta property="og:url" content="https://www.tuasesormedicare.com/">
+
+<link rel="canonical" href="https://www.tuasesormedicare.com/">
+
+<style>
+/* ============================================================
+   GOLDEN BENEFITS — hoja de estilo
+   Diseñada para lectores de 65+:
+   - Texto base 19px (la mayoría de sitios usa 16px)
+   - Contraste alto en todo el texto
+   - Botones grandes, mínimo 56px de alto
+   - Sin teléfono: toda la página empuja al formulario
+   ============================================================ */
+
+:root{
+  --azul:#0f2a4a;
+  --azul-claro:#1b4374;
+  --oro:#b8860f;
+  --oro-claro:#f0c95c;
+  --crema:#fdfaf3;
+  --blanco:#ffffff;
+  --texto:#17212e;
+  --texto-suave:#4a5a6e;
+  --borde:#e2dbcc;
+  --verde:#1d6b45;
+  --radio:14px;
+  --sombra:0 4px 20px rgba(15,42,74,.10);
+  --sombra-alta:0 10px 34px rgba(15,42,74,.16);
+  --ancho:1120px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important; transition:none!important}
+}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  font-size:19px;
+  line-height:1.65;
+  color:var(--texto);
+  background:var(--crema);
+}
+
+h1,h2,h3{line-height:1.2; margin:0 0 .5em; color:var(--azul); font-weight:800; letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.6vw,3.1rem)}
+h2{font-size:clamp(1.7rem,3.8vw,2.5rem)}
+h3{font-size:clamp(1.2rem,2.2vw,1.4rem)}
+p{margin:0 0 1em}
+a{color:var(--azul-claro)}
+img{max-width:100%; height:auto; display:block}
+
+.contenedor{width:100%; max-width:var(--ancho); margin:0 auto; padding:0 20px}
+.seccion{padding:72px 0}
+.seccion--crema{background:var(--crema)}
+.seccion--blanca{background:var(--blanco)}
+.centro{text-align:center}
+.plomo{font-size:1.15em; color:var(--texto-suave); max-width:62ch; margin-left:auto; margin-right:auto}
+
+/* --- Foco visible para navegación con teclado --- */
+a:focus-visible,button:focus-visible,input:focus-visible,
+textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:4px solid var(--oro-claro);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* ============ BOTONES ============ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  min-height:60px; padding:16px 30px;
+  font-size:1.12rem; font-weight:800; text-decoration:none;
+  border-radius:var(--radio); border:3px solid transparent;
+  cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;
+  text-align:center; font-family:inherit;
+}
+.btn:hover{transform:translateY(-2px); box-shadow:var(--sombra-alta)}
+.btn--oro{background:var(--oro-claro); color:#3a2b00; border-color:#a97f0c}
+.btn--azul{background:var(--azul); color:#fff}
+.btn--fantasma{background:transparent; color:var(--azul); border-color:var(--azul)}
+.btn--grande{font-size:1.28rem; min-height:70px; padding:18px 36px}
+.btn--ancho{width:100%}
+
+/* ============ BARRA SUPERIOR FIJA ============ */
+.barra{
+  position:sticky; top:0; z-index:100;
+  background:var(--azul); color:#fff;
+  box-shadow:0 2px 12px rgba(0,0,0,.22);
+}
+.barra__int{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:11px 20px; max-width:var(--ancho); margin:0 auto;
+}
+.marca{display:flex; align-items:center; gap:13px; text-decoration:none; color:#fff}
+
+/* Chapa blanca que sostiene el logo. Funciona igual si el archivo del logo
+   tiene fondo blanco o fondo transparente. */
+.marca__chapa{
+  width:54px; height:54px; flex:0 0 54px;
+  background:#fff; border-radius:13px;
+  display:grid; place-items:center; padding:4px;
+  box-shadow:0 2px 10px rgba(0,0,0,.28);
+  position:relative; overflow:hidden;
+}
+.marca__chapa svg{width:100%; height:100%; object-fit:contain; display:block}
+/* El archivo del logo trae margen blanco alrededor del monograma.
+   Lo ampliamos y centramos para recortar ese margen dentro de la chapa. */
+.marca__chapa img{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:116%; height:116%; max-width:none; object-fit:contain; display:block;
+}
+/* El SVG de respaldo se oculta en cuanto carga el archivo real */
+.marca__chapa img + svg{display:none}
+
+.marca__txt{display:flex; flex-direction:column; line-height:1.15}
+.marca__nombre{font-weight:800; font-size:1.2rem; letter-spacing:-.01em}
+.marca__sub{font-size:.74rem; opacity:.82; letter-spacing:.14em; text-transform:uppercase; color:var(--oro-claro)}
+
+.barra__cta{
+  background:var(--oro-claro); color:#3a2b00;
+  padding:12px 24px; border-radius:999px;
+  font-weight:800; font-size:1.02rem; text-decoration:none;
+  white-space:nowrap; border:2px solid #a97f0c;
+}
+.barra__cta:hover{background:#fff}
+
+/* ============ HÉROE ============ */
+.heroe{
+  background:
+    radial-gradient(1100px 520px at 78% -12%, rgba(240,201,92,.30), transparent 62%),
+    linear-gradient(160deg,#0f2a4a 0%,#1b4374 100%);
+  color:#fff; padding:56px 0 68px;
+}
+.heroe h1{color:#fff}
+.heroe__grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  grid-template-rows:auto 1fr;   /* la fila 2 absorbe el alto sobrante del formulario */
+  gap:26px 48px;
+  align-items:start;
+}
+.heroe__txt{grid-column:1; grid-row:1}
+.heroe__form{grid-column:2; grid-row:1 / span 2}
+.heroe__lista{grid-column:1; grid-row:2; align-self:start}
+
+.heroe__etiqueta{
+  display:inline-block; background:rgba(240,201,92,.18); color:var(--oro-claro);
+  border:1.5px solid rgba(240,201,92,.5);
+  padding:8px 18px; border-radius:999px;
+  font-weight:800; font-size:.92rem; letter-spacing:.05em; text-transform:uppercase;
+  margin-bottom:20px;
+}
+.heroe__sub{font-size:1.2rem; color:#dbe6f2; max-width:40ch; margin-bottom:0}
+
+.lista-check{list-style:none; margin:0; padding:0}
+.lista-check li{position:relative; padding:0 0 0 40px; margin-bottom:14px; font-size:1.05rem}
+.lista-check li:last-child{margin-bottom:0}
+.lista-check li::before{
+  content:"✓"; position:absolute; left:0; top:1px;
+  width:27px; height:27px; border-radius:50%;
+  background:var(--verde); color:#fff;
+  display:grid; place-items:center; font-size:.92rem; font-weight:900;
+}
+.heroe__lista li{color:#dbe6f2}
+.heroe__lista li::before{background:var(--oro-claro); color:#3a2b00}
+
+/* ============ TARJETA DE FORMULARIO ============ */
+.form-tarjeta{
+  background:var(--blanco); color:var(--texto);
+  border-radius:20px; padding:30px;
+  box-shadow:var(--sombra-alta);
+  border-top:7px solid var(--oro-claro);
+}
+.form-tarjeta h2,.form-tarjeta h3{margin-bottom:6px; font-size:1.42rem}
+.form-tarjeta .intro{color:var(--texto-suave); font-size:1.02rem; margin-bottom:22px}
+
+.campo{margin-bottom:18px}
+.campo label{display:block; font-weight:800; margin-bottom:7px; font-size:1.02rem}
+.campo input,.campo textarea,.campo select{
+  width:100%; padding:15px 17px; font-size:1.08rem; font-family:inherit;
+  border:2px solid #c2ccd8; border-radius:10px; background:#fff; color:var(--texto);
+  min-height:58px;
+}
+.campo textarea{min-height:104px; resize:vertical}
+.campo input:focus,.campo textarea:focus,.campo select:focus{border-color:var(--azul)}
+.aviso-form{font-size:.88rem; color:var(--texto-suave); margin:14px 0 0; line-height:1.55}
+
+/* ============ FRANJA DE CONFIANZA ============ */
+.franja{background:var(--azul); color:#cfe0f0; padding:22px 0; border-top:4px solid var(--oro)}
+.franja__int{display:flex; justify-content:center; gap:44px; flex-wrap:wrap; text-align:center; font-weight:700}
+.franja b{color:var(--oro-claro); display:block; font-size:1.6rem; line-height:1.2}
+
+/* ============ REJILLAS / TARJETAS ============ */
+.rejilla{display:grid; gap:26px}
+.rejilla--3{grid-template-columns:repeat(3,1fr)}
+
+.tarjeta{
+  background:var(--blanco); border:2px solid var(--borde);
+  border-radius:var(--radio); padding:30px;
+  transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.tarjeta:hover{border-color:var(--oro-claro); transform:translateY(-4px); box-shadow:var(--sombra)}
+.tarjeta__icono{
+  width:60px; height:60px; border-radius:14px; margin-bottom:18px;
+  background:linear-gradient(145deg,#fff5da,#f7e3a8);
+  display:grid; place-items:center; font-size:1.85rem;
+  border:2px solid #ecd48f;
+}
+.tarjeta p:last-child{margin-bottom:0}
+
+/* Tarjetas de dolor / problema */
+.dolor{background:#fff6f4; border:2px solid #f3d3cb; border-radius:var(--radio); padding:28px}
+.dolor h3{color:#8c2f18; font-size:1.15rem; display:flex; gap:10px; align-items:flex-start}
+.dolor p{margin-bottom:0; color:#5c3b33}
+
+/* ============ PARTES DE MEDICARE ============ */
+.parte{
+  display:flex; gap:22px; align-items:flex-start;
+  background:var(--blanco); border:2px solid var(--borde);
+  border-left:8px solid var(--oro-claro);
+  border-radius:var(--radio); padding:26px 28px;
+}
+.parte__letra{
+  flex:0 0 62px; width:62px; height:62px; border-radius:50%;
+  background:var(--azul); color:var(--oro-claro);
+  display:grid; place-items:center; font-size:1.9rem; font-weight:900;
+}
+.parte h3{margin-bottom:6px}
+.parte p{margin-bottom:0; color:var(--texto-suave)}
+
+/* ============ FECHAS ============ */
+.fecha{
+  background:var(--blanco); border:2px solid var(--borde);
+  border-radius:var(--radio); padding:28px; text-align:center;
+}
+.fecha__rango{display:block; font-size:1.35rem; font-weight:900; color:var(--oro); margin-bottom:8px}
+.fecha h3{font-size:1.12rem}
+.fecha p{margin-bottom:0; color:var(--texto-suave); font-size:.98rem}
+
+/* ============ ASESOR ============ */
+.asesor{display:grid; grid-template-columns:320px 1fr; gap:52px; align-items:center}
+.asesor__foto{
+  width:320px; height:320px; border-radius:20px;
+  background:linear-gradient(145deg,var(--azul),var(--azul-claro));
+  box-shadow:var(--sombra-alta); border:5px solid var(--oro-claro);
+  overflow:hidden; position:relative;
+  display:grid; place-items:center;
+}
+/* Iniciales de respaldo — solo se ven si el archivo de la foto no existe */
+.asesor__foto::after{
+  content:"ES"; color:var(--oro-claro); font-size:5rem; font-weight:900;
+}
+.asesor__foto img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+}
+.cita{
+  border-left:6px solid var(--oro-claro); padding-left:24px;
+  font-size:1.22rem; font-style:italic; color:var(--azul);
+  margin:26px 0;
+}
+
+/* ============ PREGUNTAS FRECUENTES ============ */
+.faq{
+  background:var(--blanco); border:2px solid var(--borde);
+  border-radius:var(--radio); margin-bottom:14px; overflow:hidden;
+}
+.faq summary{
+  cursor:pointer; padding:24px 28px; font-weight:800; font-size:1.09rem;
+  color:var(--azul); list-style:none; display:flex; justify-content:space-between;
+  gap:18px; align-items:center; min-height:60px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; font-size:2rem; font-weight:400; color:var(--oro); line-height:1}
+.faq[open] summary::after{content:"–"}
+.faq[open] summary{background:#fbf6e9}
+.faq__cuerpo{padding:4px 28px 26px; color:var(--texto-suave)}
+.faq__cuerpo p:last-child{margin-bottom:0}
+
+/* ============ PIE ============ */
+.pie{background:#0a1c33; color:#9fb4cb; padding:52px 0 28px; font-size:.96rem}
+.pie a{color:#cfe0f0}
+.pie__grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:36px; margin-bottom:34px}
+.pie h4{color:#fff; font-size:1.05rem; margin:0 0 14px}
+.pie ul{list-style:none; margin:0; padding:0}
+.pie li{margin-bottom:9px}
+.descargo{
+  border-top:1px solid rgba(255,255,255,.14);
+  padding-top:24px; font-size:.86rem; line-height:1.6; color:#8ba3bd;
+}
+.descargo p{margin-bottom:12px}
+
+/* ============ BARRA MÓVIL ============ */
+.barra-movil{
+  display:none;
+  position:fixed; bottom:0; left:0; right:0; z-index:200;
+  background:var(--blanco); border-top:3px solid var(--oro);
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  box-shadow:0 -4px 20px rgba(0,0,0,.18);
+}
+.barra-movil .btn{width:100%; min-height:58px; font-size:1.1rem}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width:960px){
+  .heroe__grid{grid-template-columns:1fr; grid-template-rows:none; gap:30px}
+  /* En celular el orden es: titular → formulario → lista de beneficios */
+  .heroe__txt,.heroe__form,.heroe__lista{grid-column:1; grid-row:auto}
+  .asesor{grid-template-columns:1fr; gap:30px; text-align:center}
+  .asesor__foto{margin:0 auto}
+  .cita{text-align:left}
+  .rejilla--3{grid-template-columns:repeat(2,1fr)}
+  .pie__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  body{font-size:18px; padding-bottom:88px}   /* espacio para la barra fija */
+  .seccion{padding:52px 0}
+  .rejilla--3{grid-template-columns:1fr}
+  .pie__grid{grid-template-columns:1fr; gap:26px}
+  .barra__cta{display:none}                    /* en móvil manda la barra inferior */
+  .barra__int{padding:10px 16px}
+  .franja__int{gap:26px}
+  .barra-movil{display:block}
+  .parte{flex-direction:column; gap:14px}
+  .asesor__foto{width:250px; height:250px}
+  .form-tarjeta{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ BARRA SUPERIOR ══════════════ -->
+<header class="barra">
+  <div class="barra__int">
+    <a class="marca" href="#inicio" aria-label="Golden Benefits — ir al inicio">
+      <span class="marca__chapa">
+        <!-- El archivo logo.png se muestra en cuanto exista en esta carpeta.
+             Si falta, se borra solo y aparece el monograma SVG de respaldo. -->
+        <img src="logo.png" alt="" onerror="this.remove()">
+        <svg viewBox="0 8 92 90" aria-hidden="true">
+          <defs>
+            <linearGradient id="gbOro" x1="8%" y1="0%" x2="92%" y2="100%">
+              <stop offset="0%"   stop-color="#e0bb56"/>
+              <stop offset="46%"  stop-color="#9d7310"/>
+              <stop offset="68%"  stop-color="#e6cd7c"/>
+              <stop offset="100%" stop-color="#b78d20"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#gbOro)" stroke-width="7.5" stroke-linecap="round">
+            <path d="M61 36 A28 28 0 1 0 61 68"/>
+            <path d="M47 52 H63"/>
+            <path d="M64 22 V84"/>
+            <path d="M64 22 A13 13 0 0 1 64 48"/>
+            <path d="M64 46 A19 19 0 0 1 64 84"/>
+          </g>
+          <path d="M47 30 Q48.6 39.4 58 41 Q48.6 42.6 47 52 Q45.4 42.6 36 41 Q45.4 39.4 47 30 Z"
+                fill="url(#gbOro)"/>
+        </svg>
+      </span>
+      <span class="marca__txt">
+        <span class="marca__nombre">Golden Benefits</span>
+        <span class="marca__sub">Insurance</span>
+      </span>
+    </a>
+    <a class="barra__cta" href="#solicitar-informacion">Déjeme sus datos</a>
+  </div>
+</header>
+
+<!-- ══════════════ HÉROE ══════════════ -->
+<section class="heroe" id="inicio">
+  <div class="contenedor heroe__grid">
+
+    <div class="heroe__txt">
+      <span class="heroe__etiqueta">Asesoría sin costo para usted</span>
+      <h1>Medicare explicado claro, en español y sin prisa.</h1>
+      <p class="heroe__sub">
+        Usted trabajó toda su vida por estos beneficios. Déjeme sus datos y yo lo llamo
+        para explicarle sus opciones — sin compromiso y sin que le cueste nada.
+      </p>
+    </div>
+
+    <!-- FORMULARIO PRINCIPAL
+         ⚠️ ERNESTO: cambie SU_CODIGO_AQUI por su enlace de Formspree. Ver README.md -->
+    <div class="heroe__form" id="solicitar-informacion">
+      <form class="form-tarjeta" action="https://formspree.io/f/SU_CODIGO_AQUI" method="POST">
+        <h2>Solicitar información</h2>
+        <p class="intro">Llene estos datos y me comunico con usted a la hora que prefiera.</p>
+
+        <div class="campo">
+          <label for="nombre">Su nombre <span aria-hidden="true">*</span></label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="name">
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Su teléfono <span aria-hidden="true">*</span></label>
+          <input type="tel" id="telefono" name="telefono" required autocomplete="tel"
+                 inputmode="tel" placeholder="000-000-0000">
+        </div>
+
+        <div class="campo">
+          <label for="estado">¿En qué estado vive? <span aria-hidden="true">*</span></label>
+          <input type="text" id="estado" name="estado" required
+                 autocomplete="address-level1" placeholder="Por ejemplo: Illinois">
+        </div>
+
+        <div class="campo">
+          <label for="momento">¿Cuándo prefiere que le llame?</label>
+          <select id="momento" name="momento">
+            <option>Por la mañana</option>
+            <option>Por la tarde</option>
+            <option>Cualquier hora está bien</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--oro btn--ancho btn--grande">
+          Quiero que me llamen
+        </button>
+
+        <p class="aviso-form">
+          Sus datos son solo para comunicarme con usted. No los vendo ni los comparto.
+          Al enviar autoriza que un agente de seguros con licencia se comunique con usted
+          por teléfono, mensaje de texto o correo electrónico.
+        </p>
+      </form>
+    </div>
+
+    <ul class="lista-check heroe__lista">
+      <li>Una explicación en palabras sencillas, las veces que haga falta</li>
+      <li>Comparación de los planes disponibles en su área</li>
+      <li>Ayuda con la inscripción para evitar multas de por vida</li>
+      <li>Revisión de su cobertura de medicinas, dental y vista</li>
+      <li>Un asesor de verdad, todo el año — no solo cuando se inscribe</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ══════════════ FRANJA DE CIFRAS ══════════════ -->
+<!-- ⚠️ ERNESTO: cambie "+10 años" por su número real. Ver README.md -->
+<div class="franja">
+  <div class="contenedor franja__int">
+    <div><b>+10 años</b>ayudando a la comunidad</div>
+    <div><b>100%</b>en español</div>
+    <div><b>$0</b>costo para usted</div>
+    <div><b>50 estados</b>en todo el país</div>
+  </div>
+</div>
+
+<!-- ══════════════ EL PROBLEMA ══════════════ -->
+<section class="seccion seccion--crema">
+  <div class="contenedor">
+    <div class="centro" style="margin-bottom:44px">
+      <h2>¿Le suena familiar?</h2>
+      <p class="plomo">Si contestó que sí a cualquiera de estas, hablemos. No hay pregunta tonta.</p>
+    </div>
+
+    <div class="rejilla rejilla--3">
+      <div class="dolor">
+        <h3><span aria-hidden="true">📬</span> Me llegan cartas y no las entiendo</h3>
+        <p>Sobres del gobierno, folletos de aseguranzas, llamadas todos los días. Nadie se lo explica con calma y en su idioma.</p>
+      </div>
+      <div class="dolor">
+        <h3><span aria-hidden="true">⏰</span> Tengo miedo de inscribirme tarde</h3>
+        <p>Perder su periodo de inscripción puede significar una multa que se paga <strong>todos los meses, de por vida</strong>. Y mucha gente no lo sabe.</p>
+      </div>
+      <div class="dolor">
+        <h3><span aria-hidden="true">💊</span> Mis medicinas me salen carísimas</h3>
+        <p>Un plan mal escogido puede costarle cientos de dólares al año en medicinas que otro plan cubriría casi completas.</p>
+      </div>
+      <div class="dolor">
+        <h3><span aria-hidden="true">🦷</span> ¿El dentista y los lentes están cubiertos?</h3>
+        <p>Medicare Original no cubre casi nada de dental ni de vista. Hay opciones — pero hay que saber cuáles.</p>
+      </div>
+      <div class="dolor">
+        <h3><span aria-hidden="true">🩺</span> ¿Mi doctor acepta este plan?</h3>
+        <p>Cambiar de plan sin revisar la red puede dejarlo sin el doctor de siempre. Eso se revisa antes, no después.</p>
+      </div>
+      <div class="dolor">
+        <h3><span aria-hidden="true">🗣️</span> Me atendieron en inglés y dije que sí a todo</h3>
+        <p>Firmar algo que no entendió no es su culpa. Vamos a revisarlo juntos, con tiempo y sin presión.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LAS 4 PARTES ══════════════ -->
+<section class="seccion seccion--crema" id="medicare">
+  <div class="contenedor">
+    <div class="centro" style="margin-bottom:44px">
+      <h2>Medicare en 4 partes</h2>
+      <p class="plomo">Un resumen rápido para que llegue a nuestra llamada con una idea general.</p>
+    </div>
+
+    <div class="rejilla" style="gap:18px">
+      <div class="parte">
+        <div class="parte__letra" aria-hidden="true">A</div>
+        <div>
+          <h3>Hospital</h3>
+          <p>Cubre su estancia en el hospital, cuidado especializado de enfermería, hospicio y algo de cuidado en casa. La mayoría de las personas no paga prima por la Parte A si trabajó lo suficiente en Estados Unidos.</p>
+        </div>
+      </div>
+      <div class="parte">
+        <div class="parte__letra" aria-hidden="true">B</div>
+        <div>
+          <h3>Médico</h3>
+          <p>Cubre visitas al doctor, análisis, estudios, ambulancia y equipo médico. Casi todos pagan una prima mensual por la Parte B.</p>
+        </div>
+      </div>
+      <div class="parte">
+        <div class="parte__letra" aria-hidden="true">C</div>
+        <div>
+          <h3>Medicare Advantage</h3>
+          <p>Planes de compañías privadas aprobadas por Medicare que juntan la Parte A y la B en uno solo. Muchos incluyen medicinas, dental, vista y otros beneficios extra.</p>
+        </div>
+      </div>
+      <div class="parte">
+        <div class="parte__letra" aria-hidden="true">D</div>
+        <div>
+          <h3>Medicinas recetadas</h3>
+          <p>Cubre sus medicamentos de receta. Cada plan tiene su propia lista de medicinas cubiertas — por eso importa tanto comparar antes de escoger.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="centro" style="margin-top:40px">
+      <a class="btn btn--azul btn--grande" href="#solicitar-informacion">
+        Tengo dudas — quiero que me llamen
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EL ASESOR ══════════════ -->
+<section class="seccion seccion--crema" id="sobre-mi">
+  <div class="contenedor asesor">
+    <!-- El archivo ernesto.jpg se muestra en cuanto exista en esta carpeta.
+         Si falta, se borra solo y aparecen las iniciales de respaldo. -->
+    <div class="asesor__foto">
+      <img src="ernesto.jpg" alt="Ernesto Sánchez, asesor de Medicare de Golden Benefits"
+           onerror="this.remove()">
+    </div>
+
+    <div>
+      <h2>Mucho gusto, soy Ernesto</h2>
+      <p>
+        Soy agente de seguros de salud con licencia y llevo años ayudando a familias hispanas
+        de todo el país a entender Medicare. Empecé haciendo esto porque vi a demasiada gente
+        firmar papeles que nadie les tradujo, y después pagar las consecuencias.
+      </p>
+      <p>
+        No trabajo con prisa ni con presión. Nos sentamos, le explico sus opciones, le digo con
+        franqueza qué le conviene y usted decide. Si prefiere pensarlo, lo piensa. Aquí voy a estar.
+      </p>
+
+      <blockquote class="cita">
+        “Despertar todos los días con más pasión por atender no es una carga, es una virtud.”
+      </blockquote>
+
+      <p style="font-weight:800; color:var(--azul); margin-bottom:6px">Ernesto Sánchez</p>
+      <p style="color:var(--texto-suave); font-size:1rem">
+        Agente de seguros de salud con licencia · Golden Benefits Insurance<br>
+        Licencia n.º 20161875
+      </p>
+
+      <a class="btn btn--oro" href="#solicitar-informacion" style="margin-top:22px">
+        Hablemos — déjeme sus datos
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PREGUNTAS FRECUENTES ══════════════ -->
+<section class="seccion seccion--blanca" id="preguntas">
+  <div class="contenedor" style="max-width:860px">
+    <div class="centro" style="margin-bottom:40px">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <details class="faq">
+      <summary>¿Cuánto me cuesta su ayuda?</summary>
+      <div class="faq__cuerpo">
+        <p>Nada. Mi asesoría no tiene ningún costo para usted y el precio del plan es exactamente el mismo si se inscribe conmigo o si se inscribe solo. A los agentes nos paga la compañía de seguros, no el cliente.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Me van a presionar para que compre algo?</summary>
+      <div class="faq__cuerpo">
+        <p>No. Le explico sus opciones, le digo cuál creo que le conviene y por qué, y usted decide cuando esté listo. Si quiere consultarlo con su familia primero, me parece perfecto.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Qué pasa después de que envío mis datos?</summary>
+      <div class="faq__cuerpo">
+        <p>Yo lo llamo a usted, normalmente el mismo día o al día siguiente, a la hora que haya escogido. En esa llamada solo conversamos: usted me cuenta su situación y yo le explico sus opciones. Nada más.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Habla español de verdad?</summary>
+      <div class="faq__cuerpo">
+        <p>Sí. Todas mis consultas son en español, sin traductores ni intermediarios. Si prefiere inglés, también lo atiendo sin problema.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Ya tengo un plan. ¿Igual vale la pena hablar?</summary>
+      <div class="faq__cuerpo">
+        <p>Sí, y mucho. Los planes cambian todos los años: la lista de medicinas cubiertas, los copagos y hasta los doctores de la red. Una revisión anual gratis puede ahorrarle bastante dinero.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Tengo que ir a una oficina?</summary>
+      <div class="faq__cuerpo">
+        <p>No. Podemos hacerlo por teléfono, por video o en persona — como usted se sienta más cómodo. Atiendo en los 50 estados.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Y si sigo sin entender después de que me explique?</summary>
+      <div class="faq__cuerpo">
+        <p>Me lo vuelve a preguntar, con toda confianza. Prefiero explicarle algo cinco veces a que usted firme algo que no entendió.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Qué información necesito tener a la mano?</summary>
+      <div class="faq__cuerpo">
+        <p>Con esto es suficiente para empezar: su tarjeta roja, blanca y azul de Medicare (si ya la tiene), su lista de medicinas con las dosis, y los nombres de los doctores que quiere conservar.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACTO ══════════════ -->
+<!-- ══════════════ PIE DE PÁGINA ══════════════ -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div>
+        <h4>Golden Benefits Insurance</h4>
+        <p>Medicare hecho fácil y en su idioma. Asesoría honesta, en español y sin costo para usted, en los 50 estados.</p>
+        <p style="margin-top:14px">
+          Ernesto Sánchez · Licencia n.º 20161875<br>
+          <a href="mailto:ernestos@expertinsuranceteam.com">ernestos@expertinsuranceteam.com</a>
+        </p>
+        <!-- ⚠️ ERNESTO: ajuste su horario real -->
+        <p style="margin-top:14px">
+          Lunes a viernes, 9:00 a.m. – 7:00 p.m.<br>
+          Sábados, 10:00 a.m. – 2:00 p.m.<br>
+          Área de servicio: los 50 estados
+        </p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#medicare">Partes de Medicare</a></li>
+          <li><a href="#sobre-mi">Sobre Ernesto</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#solicitar-informacion">Solicitar información</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces útiles</h4>
+        <ul>
+          <li><a href="https://es.medicare.gov" target="_blank" rel="noopener">Medicare.gov (en español)</a></li>
+          <li><a href="privacidad.html">Aviso de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ⚠️ IMPORTANTE — NO BORRE ESTOS DESCARGOS.
+         CMS los exige a los TPMO (agentes que promocionan planes Medicare Advantage o Parte D).
+         El número 1-800-MEDICARE es obligatorio: es de Medicare, no de Golden Benefits.
+         Confirme la versión exacta con su FMO o carrier antes de publicar. -->
+    <div class="descargo">
+      <p>
+        No estamos afiliados ni respaldados por el gobierno de los Estados Unidos ni por el
+        programa federal Medicare. Esta es una solicitud de seguro. Un agente de seguros con
+        licencia puede comunicarse con usted.
+      </p>
+      <p>
+        No ofrecemos todos los planes disponibles en su área. Cualquier información que le
+        demos se limita a los planes que sí ofrecemos en su área. Para conocer todas sus
+        opciones, comuníquese con Medicare.gov o llame al 1-800-MEDICARE (1-800-633-4227),
+        TTY 1-877-486-2048, las 24 horas del día, los 7 días de la semana.
+      </p>
+      <p style="margin-bottom:0">
+        © <span id="anio">2026</span> Golden Benefits Insurance. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ BARRA FIJA MÓVIL ══════════════ -->
+<div class="barra-movil">
+  <a class="btn btn--oro" href="#solicitar-informacion">Déjeme sus datos y lo llamo</a>
+</div>
+
+<script>
+  // Año automático en el pie de página
+  document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Golden Benefits — sitio nuevo
 
-Página de aterrizaje para **www.tuasesormedicare.com**, diseñada para adultos mayores
+Página de aterrizaje para **www.golden-benefits.com**, diseñada para adultos mayores
 hispanohablantes que están entendiendo Medicare.
 
 **Estrategia:** la página no muestra ningún número de teléfono. Todo empuja al
@@ -89,18 +89,24 @@ actualizar cualquier texto, precio o dato:
 
 ---
 
-## Conectar su dominio propio (www.tuasesormedicare.com)
+## Conectar su dominio propio (www.golden-benefits.com)
 
-Su dominio hoy apunta a WordPress.com gratis. Para pasarlo a este sitio en Vercel:
+**golden-benefits.com es ahora el dominio oficial del sitio**, en lugar de
+tuasesormedicare.com. Las etiquetas del sitio (`canonical`, `og:url`) ya apuntan a
+golden-benefits.com.
 
 1. En **vercel.com**, entre al proyecto → **Settings → Domains**.
-2. Escriba `tuasesormedicare.com` (y opcionalmente `www.tuasesormedicare.com`) y
+2. Escriba `golden-benefits.com` (y opcionalmente `www.golden-benefits.com`) y
    agréguelo.
 3. Vercel le va a mostrar exactamente qué registros DNS cambiar (normalmente un
    registro tipo A o CNAME). Entre a donde compró el dominio (GoDaddy, Namecheap, etc.)
    y haga ese cambio ahí.
 4. Puede tardar entre unos minutos y unas horas en propagarse. Vercel le avisa en el
    panel cuando quede activo, y agrega el certificado de seguridad (candado) solo.
+5. **Si tuasesormedicare.com sigue activo en algún lado** (anuncios viejos, tarjetas de
+   presentación, Google), configure ahí una redirección 301 hacia golden-benefits.com
+   en vez de dejarlo apagado sin más — así no pierde las visitas que todavía lleguen
+   por ese nombre.
 
 Esto reemplaza por completo lo que hoy sirve WordPress.com — los popups de
 "Subscribe", el banner de cookies y el anuncio de "Create a free website" van a

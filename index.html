@@ -734,5 +734,28 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
   document.getElementById('anio').textContent = new Date().getFullYear();
 </script>
 
+<script>
+  // Envío del formulario por fetch: la redirección a gracias.html queda bajo
+  // control del sitio en vez de depender del panel de Formspree (_next requiere
+  // que ellos tengan el dominio autorizado, y con un dominio nuevo puede no estarlo).
+  // Si el fetch falla, cae de vuelta a un envío normal como respaldo.
+  (function(){
+    var form = document.querySelector('.form-tarjeta');
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var destino = form.querySelector('input[name="_next"]').value;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if (res.ok) { window.location.href = destino; }
+        else { form.submit(); }
+      }).catch(function(){ form.submit(); });
+    });
+  })();
+</script>
+
 </body>
 </html>

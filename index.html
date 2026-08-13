@@ -750,18 +750,21 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
       var destino = form.querySelector('input[name="_next"]').value;
       var datos = new FormData(form);
 
-      // Copia del lead a RadiusBob — no bloquea ni afecta el envío principal
-      // si falla o tarda; es un "mejor esfuerzo" en paralelo.
-      fetch('/api/radiusbob-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nombre: datos.get('nombre'),
-          telefono: datos.get('telefono'),
-          estado: datos.get('estado'),
-          momento: datos.get('momento')
-        })
-      }).catch(function(){ /* silencioso: RadiusBob es secundario a Formspree */ });
+      // Envío a RadiusBob desactivado por ahora: sin el Agent ID correcto,
+      // los leads caían en la cuenta de la agencia en vez de en la de Ernesto.
+      // La función /api/radiusbob-lead sigue en el proyecto, lista para
+      // reactivarse (solo hay que descomentar este bloque) en cuanto se
+      // consiga el Agent ID correcto.
+      // fetch('/api/radiusbob-lead', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     nombre: datos.get('nombre'),
+      //     telefono: datos.get('telefono'),
+      //     estado: datos.get('estado'),
+      //     momento: datos.get('momento')
+      //   })
+      // }).catch(function(){});
 
       fetch(form.action, {
         method: 'POST',

@@ -748,9 +748,24 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var destino = form.querySelector('input[name="_next"]').value;
+      var datos = new FormData(form);
+
+      // Copia del lead a RadiusBob — no bloquea ni afecta el envío principal
+      // si falla o tarda; es un "mejor esfuerzo" en paralelo.
+      fetch('/api/radiusbob-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: datos.get('nombre'),
+          telefono: datos.get('telefono'),
+          estado: datos.get('estado'),
+          momento: datos.get('momento')
+        })
+      }).catch(function(){ /* silencioso: RadiusBob es secundario a Formspree */ });
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
+        body: datos,
         headers: { 'Accept': 'application/json' }
       }).then(function(res){
         if (res.ok) { window.location.href = destino; }

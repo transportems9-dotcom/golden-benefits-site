@@ -168,8 +168,12 @@ su FMO.
 
 ## Ideas para después (no urgentes)
 
-- **Testimonios reales.** Tres frases de clientes, con nombre y ciudad, valen más que
-  cualquier diseño. Pídalos por mensaje después de una inscripción.
+- **Más testimonios reales.** `gracias.html` ya tiene la sección con el de Angela R.
+  Para agregar otro, copie un bloque `<figure>…</figure>` completo debajo del último
+  (hay un comentario con las instrucciones). Solo con palabras reales del cliente, su
+  permiso por escrito, y sin montos, nombres de planes ni condiciones de salud. Cuando
+  haya 2 o más, cambie el título "Una clienta cuenta su experiencia" por "Lo que dicen
+  mis clientes".
 - **Un video corto** suyo, de 60 segundos, presentándose en español.
 - **Versión en inglés**, si atiende clientes bilingües o a los hijos que ayudan a sus
   padres a escoger.

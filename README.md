@@ -168,8 +168,8 @@ su FMO.
 
 ## Ideas para después (no urgentes)
 
-- **Más testimonios reales.** `gracias.html` ya tiene la sección con los de Angela R.
-  y Teresa L. Para agregar otro, copie un bloque `<figure>…</figure>` completo debajo
+- **Más testimonios reales.** `gracias.html` ya tiene la sección con los de Angela R.,
+  Teresa L. y Roberto H. Para agregar otro, copie un bloque `<figure>…</figure>` completo debajo
   del último (hay un comentario con las instrucciones). Solo con palabras reales del
   cliente, su permiso por escrito, y sin montos, nombres de planes ni condiciones de
   salud.
